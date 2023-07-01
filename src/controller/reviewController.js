@@ -53,7 +53,7 @@ const editReview = async (req, res) => {
       ratings,
       message,
     };
-
+    review = await ReviewModel.findOneAndUpdate({ email }, review);
     res.json({ review, status: 200 });
   } catch (e) {
     res

@@ -9,6 +9,6 @@ const app = express.Router();
 
 app.post("/add-review", addReview);
 app.post("/edit-review", editReview);
-app.get("/get-review", getReview);
+app.get("/get-review/:email", getReview);
 
 module.exports = app;
